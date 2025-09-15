@@ -1,0 +1,96 @@
+.principal {
+  border: 2px solid red;
+  padding: 10px;
+}
+
+.haut {
+  border: 2px solid green;
+  height: 40px;
+  text-align : center ;
+  width: 80%;
+  margin: auto;
+}
+
+.bas {
+  border: 2px solid blue;
+  height: 50px;
+  text-align : center ;
+  width: 60%;
+margin: auto;
+}
+
+.sauterligne2 {
+margin-bottom: 70px;
+}
+
+.sauterligne {
+margin-bottom: 20px;
+}
+
+/*________________________________________________________________*/
+
+.secondaire {
+  border: 2px solid red;
+  padding: 10px;
+}
+
+.left {
+  text-align: center;
+  border: 2px solid green;
+  height: 200px;
+  width: 40%;
+  padding-top: 10px;
+}
+
+.right {
+  text-align: center;
+  border: 2px solid blue;
+  height: 200px;
+  width: 55%;
+  padding-top: 10px;
+}
+
+/*________________________________________________________________*/
+
+
+.troisieme {
+  border: 2px solid red;
+  padding: 10px;
+}
+
+
+.principal3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.enhaut {
+  border: 2px solid green;
+  height: 50px;
+  width: 80%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.agauche {
+  text-align: center;
+  padding-top : 10 px;
+  border: 2px solid green;
+  height: 200px;
+  width: 40%;
+}
+
+.adroite {
+  text-align: center;
+  border: 2px solid blue;
+  height: 200px;
+  width: 55%;
+}
+
+.enbas {
+  border: 2px solid blue;
+  height: 50px;
+  width: 60%;
+  clear: both;
+  margin-top: 10px;
+}
