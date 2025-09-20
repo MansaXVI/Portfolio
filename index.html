@@ -1,8 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Ousmane.css">
     <title>Ousmane Portfolio</title>
-    </head>
+</head>
 <body>
 
     <nav class="navbar">
@@ -15,30 +18,33 @@
         </ul>
     </nav>
 
-    <section id = "presentation" class = "presentation">
-         <h1>Bonjour,<br/>
-            je m'appelle Ousmane et je suis un développeur informatique </h1>
-        <h2> Ousmane Ballo 2ème année BTS SIO. </h2>
-    </section>
+    <main class="container">
+        <section id="presentation" class="presentation panel">
+            <div class="content">
+                <h1>Bonjour,<br/>
+                    je m'appelle Ousmane et je suis un développeur informatique </h1>
+                <h2> Ousmane Ballo 2ème année BTS SIO. </h2>
+            </div>
+        </section>
 
-    <section id = "aboutme" class = "aboutme">
-        <h1> A Propos </h1>
-        <p>Bonjour, je m'appelle Ousmane.<br>
-            J'ai actuellement 19 ans et je suis en deuxième année de BTS SIO, dans la branche développement.<br><br>
+        <section id="aboutme" class="aboutme panel">
+             <div class="content">
+                <h1> À Propos </h1>
+                <p>Bonjour, je m'appelle Ousmane.<br>
+                    J'ai actuellement 19 ans et je suis en deuxième année de BTS SIO, dans la branche développement.<br><br>
+                    Si j'ai choisi ce BTS, c'est parce que depuis petit, je me suis fasciné pour le développement de jeux vidéo,<br>
+                    grâce à des plateformes où l'on pouvait jouer et créer en même temps.<br><br>
+                    Plus tard, j'ai aussi découvert le développement de logiciels.<br>
+                    Tous ces facteurs m'ont poussé à m'orienter vers ce choix.
+                </p>
+            </div>
+        </section>
 
-            Si j'ai choisi ce BTS, c'est parce que depuis petit, je me suis fasciné pour le développement de jeux vidéo,<br>
-            grâce à des plateformes où l'on pouvait jouer et développer en même temps.<br><br>
-
-            Plus tard, j'ai aussi découvert le développement de logiciels.<br>
-            Tous ces facteurs m'ont poussé à m'orienter vers ce choix.
-         </p>
-    </section>
-
-    <section class = "learn">
+        <section class="learn panel">
+            <div class="content">
                 <h1> Ce que j'ai appris </h1>
-
-    <div class="icones">
-        <div class="language-container">
+                <div class="icones">
+                    <div class="language-container">
             <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank">
                 <img src="Icones/iconhtml.png" alt="HTML">
                 <p>HTML</p>
@@ -86,102 +92,74 @@
                 <p>Lua</p>
             </a>
         </div>
-    </div>
-    </section>
-
-    <section id="project" class="project">
-        <h1>Mes projets</h1>
-        <br/><br/><br/>
-
-        <div class="projets-grille">
-            <div class="projet-card">
-                <a href="Project/Uloyiko[Test]/Uloyiko.html" target="_blank">
-                    <img src="Images/UloyikoPP.JPG" alt="Projet Uloyiko">
-                </a>
-                <h3>Uloyiko</h3>
-                <p>
-                    Un site e-commerce élégant et fonctionnel, conçu pour une expérience d'achat fluide et intuitive. Ce projet a mis à l'épreuve mes compétences en intégration web et en design d'interface et en gestion de base de donnée.<br> Date : 2024
-                    <br> Travail effectué en groupe
-                </p>
-                <div class="language-icons">
-                    <img src="Icones/iconhtml.png" alt="HTML">
-                    <img src="Icones/iconcss.png" alt="CSS">
-                    <img src="Icones/iconphp.png" alt="PHP">
                 </div>
             </div>
+        </section>
 
-            <div class="projet-card">
-                <a href="Veille/Seas.html" target="_blank">
-                    <img src="Images/SeasPP.JPG" alt="Veille Technologique sur les fonds marins">
-                </a>
-                <h3>Veille Technologique</h3>
-                <p>
-                    Une veille complète sur les technologies de pointe utilisées pour l'exploration des fonds marins. Ce projet démontre ma capacité à rechercher, analyser et synthétiser des informations complexes pour rester à jour sur les innovations techniques.<br> Date : 2024/2025
-                    <br> Travail effectué tout seul
-                </p>
-                <div class="language-icons">
-                    <img src="Icones/iconhtml.png" alt="HTML">
-                    <img src="Icones/iconcss.png" alt="CSS">
+        <section id="project" class="project panel">
+             <div class="content">
+                <h1>Mes projets</h1>
+                <div class="projets-grille">
+                    <div class="projet-card">
+                        <a href="Project/Uloyiko[Test]/Uloyiko.html" target="_blank">
+                            <img src="Images/UloyikoPP.JPG" alt="Projet Uloyiko">
+                        </a>
+                        <h3>Uloyiko</h3>
+                        <p>
+                            Un site e-commerce élégant et fonctionnel, conçu pour une expérience d'achat fluide et intuitive.
+                        </p>
+                        <div class="language-icons">
+                            <img src="Icones/iconhtml.png" alt="HTML">
+                            <img src="Icones/iconcss.png" alt="CSS">
+                            <img src="Icones/iconphp.png" alt="PHP">
+                        </div>
+                    </div>
+
+                    <div class="projet-card">
+                        <a href="Veille/Seas.html" target="_blank">
+                            <img src="Images/SeasPP.JPG" alt="Veille Technologique">
+                        </a>
+                        <h3>Veille Technologique</h3>
+                        <p>
+                           Une veille complète sur les technologies de pointe utilisées pour l'exploration des fonds marins.
+                        </p>
+                        <div class="language-icons">
+                            <img src="Icones/iconhtml.png" alt="HTML">
+                            <img src="Icones/iconcss.png" alt="CSS">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id = "certification" class = "certification">
-
-        <h1>Mes Certifications</h1>
-
-        <div class="projets-grille">
-
-            <div class="projet-card">
-
-                <a href="Images/Introduction_to_Cybersecurity_Badge20250110-28-9j8it3.pdf" target="_blank">
-                    <img src="Images/CybersecurityPP.jpg" alt="CiscoCybersecurity">
-                </a>
-                <h3>Cisco Cybersecurity</h3>
-                <p>
-                    Introduction_to_Cybersecurity_Badge20250110-28-9j8it3
-                </p>
-
+        <section id="certification" class="certification panel">
+             <div class="content">
+                <h1>Mes Certifications</h1>
+                <div class="projets-grille">
+                    <div class="projet-card">
+                        <a href="Images/Introduction_to_Cybersecurity_Badge20250110-28-9j8it3.pdf" target="_blank">
+                            <img src="Images/CybersecurityPP.jpg" alt="Cisco Cybersecurity">
+                        </a>
+                        <h3>Cisco Cybersecurity</h3>
+                        <p>
+                            Introduction to Cybersecurity Badge.
+                        </p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="projet-card">
-
-                <a href="Images/Introduction_to_Cybersecurity_Badge20250110-28-9j8it3.pdf" target="_blank">
-                    <img src="Images/CybersecurityPP.jpg" alt="Certification">
-                </a>
-                <h3>N/A</h3>
-                <p>
-                    n/a
-                </p>
-
+        <section id="contact" class="panel">
+            <div class="content">
+                <h1>Me contacter</h1>
+                <p>ousmane.balloinfo@gmail.com</p>
             </div>
+        </section>
+    </main>
 
-            <div class="projet-card">
-
-                <a href="Images/Introduction_to_Cybersecurity_Badge20250110-28-9j8it3.pdf" target="_blank">
-                    <img src="Images/CybersecurityPP.jpg" alt="Certification">
-                </a>
-                <h3>N/A</h3>
-                <p>
-                    n/a
-                </p>
-
-            </div>
-        </div>
-        
-
-
-    </section>
-
-    <section id="contact">
-        <h1>Me contacter</h1>
-        <p>ousmane.balloinfo@gmail.com</p>
-    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
-
-
-
-
