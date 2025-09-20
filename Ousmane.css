@@ -1,16 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-body {
-    background-color: rgb(22, 24, 29);
-    min-height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-    color: rgb(255, 255, 255);
-    margin: 0;
+:root {
+    --couleur-accent-bleu: #8EAAFB;
+    --couleur-fond: rgb(18, 18, 18);
+    --couleur-texte: rgb(235, 235, 235);
+    --couleur-carte: rgba(255, 255, 255, 0.05);
 }
 
+body {
+    background-color: var(--couleur-fond);
+    font-family: 'Poppins', sans-serif;
+    color: var(--couleur-texte);
+    margin: 0;
+    /*
+     * LA CORRECTION EST ICI :
+     * On autorise le scroll vertical (nécessaire pour ScrollTrigger)
+     * et on cache seulement la barre de scroll horizontale.
+    */
+    overflow-x: hidden;
+}
+
+/* Style de la barre de scroll (optionnel mais esthétique) */
+body::-webkit-scrollbar {
+  width: 8px; /* Largeur pour la barre verticale */
+}
+body::-webkit-scrollbar-track {
+  background: var(--couleur-fond);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--couleur-accent-bleu);
+  border-radius: 10px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(18, 18, 18, 0.8); /* Ajout d'un fond semi-transparent */
+    backdrop-filter: blur(10px); /* Effet de flou pour un look moderne */
+}
 
 .navbar ul {
     display: flex;
-    flex-wrap: wrap;
     list-style: none;
     justify-content: flex-end;
     padding: 20px 40px;
@@ -18,79 +50,75 @@ body {
 }
 
 .navbar li {
-    margin: 0 0.75em;
+    margin: 0 1em;
 }
 
 .navbar a {
     text-decoration: none;
-    color: white;
-    text-transform: none;
-    transition: color 0.25s, box-shadow 0.25s;
-    padding: 2px 6px;
-    border-radius: 4px;
+    color: var(--couleur-texte);
+    transition: color 0.25s, background-color 0.25s;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
 }
 
 .navbar a:hover {
-    color: #8EAAFB;
-    box-shadow: 0 2px 0 0 currentColor;
-    background: rgba(142,170,251,0.08);
+    color: white;
+    background-color: var(--couleur-accent-bleu);
 }
 
-section {
-    padding: 80px 20px;
-    margin: 0 auto;
+/* Conteneur principal pour le scrolling horizontal */
+.container {
+    display: flex;
+    width: 600%; /* 100% par section, 6 sections = 600% */
+    height: 100vh;
+}
+
+.panel {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 0 5%;
+    box-sizing: border-box;
 }
 
-
-
-.presentation {
-    text-align: center;
-    padding-top: 170px;
-    margin: 30px auto;
-    width: 80%;
+.content {
+    max-width: 900px;
 }
 
-.aboutme {
-    margin-left: 15px;
+h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--couleur-texte);
+    margin-bottom: 18px;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.aboutme .content, .project .content {
     text-align: left;
-    padding-top: 120px;
-    width: 70%;
-    margin-bottom: 30px;
 }
-
-.learn{
-    padding-top: 200px;
-    margin-bottom: 70px
-    text-align right;
+.learn .content {
+    text-align: center;
 }
-
-.learn h1{
-    text-align: right;
+.learn h1 {
+    text-align: center;
+    margin-bottom: 60px;
 }
-
-
-.project{
-    padding-top: 200px;
-    margin-bottom: 150px
-}
-
-.learn img {
-    width: 120px;
-    height: 120px;
-    margin-top: 100px;
-    margin-right: 10px;
-    transition: transform 0.2s;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-
-
-
-.learn img:hover {
-    transform: scale(1.08) rotate(-4deg);
-}
-
 
 .projets-grille {
     display: grid;
@@ -100,16 +128,17 @@ section {
 }
 
 .projet-card {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--couleur-carte);
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .projet-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .projet-card img {
@@ -120,9 +149,10 @@ section {
 }
 
 .projet-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-bottom: 10px;
     color: var(--couleur-accent-bleu);
+    font-weight: 600;
 }
 
 .projet-card p {
@@ -130,71 +160,40 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.certification {
-    text-align: center;
-    padding-top: 170px;
-    margin: 30px auto;
-    width: 80%;
-}
-
-h1 {
-    font-family: 'Segoe UI', sans-serif;
-    color: aliceblue;
-    font-size: 70px;
-    letter-spacing: 2px;
-}
-
-h2 {
-    font-family: 'Segoe UI', sans-serif;
-    color: aliceblue;
-    font-size: 28px;
-    margin-bottom: 18px;
-}
-
-p {
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-
-
-.language-container {
+.icones {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-right: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .language-container a {
     color: white;
     text-decoration: none;
+    transition: color 0.2s;
+}
+.language-container a:hover {
+    color: var(--couleur-accent-bleu);
+}
+.language-container img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
 }
 
-.icones {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 100px;
-}
-
-.learn img {
-    width: 120px;
-    height: 120px;
-    transition: transform 0.2s;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+.language-container a:hover img {
+    transform: scale(1.1);
 }
 
 .language-icons {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .language-icons img {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    transition: transform 0.2s;
+    width: 40px;
+    height: 40px;
 }
